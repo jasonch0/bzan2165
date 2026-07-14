@@ -8,22 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var message = "I am a programmer!"
+    // makes it mutable, private makes it only accessible in the struct 
     var body: some View {
         VStack {
-            Text("What is Football to You?")
-                .font(.largeTitle)
-                .fontWeight(.thin)
+            Image(systemName: "swift")
+                .resizable()
+                .scaledToFit()
                 .foregroundStyle(.orange)
-            HStack {
-                Image(systemName: "figure.american.football")
-                    .resizable()
-                Image(systemName: "figure.australian.football")
-                    .resizable()
-                Image(systemName: "figure.soccer")
-                    .resizable()
-            }
-            .scaledToFit()
             
+            Text(message)
+                .font(.largeTitle)
+                .fontWeight(.heavy)
+                .foregroundStyle(.red)
+            Button("Click Me") {
+                message = "Awesome"
+                print(message)
+            }
         }
         .padding()
     }
