@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		235F800730057DBE0071B360 /* YouAreAwesome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouAreAwesome.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		235F800730057DBE0071B360 /* YouAreAwesome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = YouAreAwesome.app; path = /Users/jasoncho/dev/bzan2165/YouAreAwesome/build/Debug/YouAreAwesome.app; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -33,16 +33,7 @@
 			isa = PBXGroup;
 			children = (
 				235F800930057DBE0071B360 /* YouAreAwesome */,
-				235F800830057DBE0071B360 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		235F800830057DBE0071B360 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				235F800730057DBE0071B360 /* YouAreAwesome.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,7 +86,7 @@
 			mainGroup = 235F7FFE30057DBE0071B360;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 235F800830057DBE0071B360 /* Products */;
+			productRefGroup = 235F7FFE30057DBE0071B360;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
