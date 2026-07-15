@@ -15,36 +15,30 @@ struct ContentView: View {
         VStack {
             Spacer()
             
-            Image(systemName: image)
+            Image(image)
                 .resizable()
                 .scaledToFit()
-                .foregroundStyle(.orange)
+                .clipShape(RoundedRectangle(cornerRadius: 30))
+                .shadow(radius: 30)
             
             Text(msg)
                 .font(.largeTitle)
-                .fontWeight(.ultraLight)
-                .foregroundStyle(.black)
+                .foregroundStyle(.red)
+                .fontWeight(.heavy)
+
             Spacer()
             
             Button("Press Me!") {
                 let message1 = "You Are Awesome!"
-                let img1 = "hand.thumbsup"
+                let img1 = "image0"
                 let message2 = "You Are Great!"
-                let img2 = "sun.max.fill"
-//                if msg == message1 {
-//                    image = img2
-//                    msg = message2
-//                } else {
-//                    msg = message1
-//                    image = img1
-//                }
+                let img2 = "image1"
+
                 msg = msg == message1 ?  message2 : message1
                 image = image == img1 ? img2 : img1
             }
-            
             .buttonStyle(.borderedProminent)
             .font(.title2)
-            .tint(.orange)
         }
         .padding()
     }

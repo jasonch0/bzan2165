@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		235F800730057DBE0071B360 /* YouAreAwesome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = YouAreAwesome.app; path = /Users/jasoncho/dev/bzan2165/YouAreAwesome/build/Debug/YouAreAwesome.app; sourceTree = "<absolute>"; };
+		23DC682D3007E139005B8E0F /* YouAreAwesome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouAreAwesome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -33,6 +33,7 @@
 			isa = PBXGroup;
 			children = (
 				235F800930057DBE0071B360 /* YouAreAwesome */,
+				23DC682D3007E139005B8E0F /* YouAreAwesome.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,7 +59,7 @@
 			packageProductDependencies = (
 			);
 			productName = YouAreAwesome;
-			productReference = 235F800730057DBE0071B360 /* YouAreAwesome.app */;
+			productReference = 23DC682D3007E139005B8E0F /* YouAreAwesome.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
