@@ -14,7 +14,15 @@ struct ContentView: View {
         // makes it mutable, private makes it only accessible in the struct
     var body: some View {
         VStack {
-            Spacer()
+            Text(message)
+                .font(.largeTitle)
+                .fontWeight(.heavy)
+                .foregroundStyle(.red)
+                .multilineTextAlignment(.center)
+                .frame(height: 130)
+                .minimumScaleFactor(0.5)
+                .animation(.easeInOut(duration: 0.15), value: message)
+
             
             
             Image(image)
@@ -22,11 +30,7 @@ struct ContentView: View {
                 .scaledToFit()
                 .clipShape(RoundedRectangle(cornerRadius: 30))
                 .shadow(radius: 30)
-            Text(message)
-                .font(.largeTitle)
-                .fontWeight(.heavy)
-                .foregroundStyle(.red)
-                .multilineTextAlignment(.center)
+                .animation(.default, value: image)
             
             
             Spacer()
@@ -35,7 +39,7 @@ struct ContentView: View {
                 let messages = ["Hi",
                                 "Bill",
                                 "foo",
-                                "When the Genius Bar Needs Help, They Call You!"]
+                                "When the Genius Bar Needs Help, They Call You! BLAH BLAH BLAH BLAH BLAH"]
                 message = messages[num]
                 image = "image\(num)"
                 
