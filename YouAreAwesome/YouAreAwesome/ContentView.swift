@@ -31,13 +31,15 @@ struct ContentView: View {
                 let img1 = "hand.thumbsup"
                 let message2 = "You Are Great!"
                 let img2 = "sun.max.fill"
-                if msg == message1 {
-                    image = img2
-                    msg = message2
-                } else {
-                    msg = message1
-                    image = img1
-                }
+//                if msg == message1 {
+//                    image = img2
+//                    msg = message2
+//                } else {
+//                    msg = message1
+//                    image = img1
+//                }
+                msg = msg == message1 ?  message2 : message1
+                image = image == img1 ? img2 : img1
             }
             
             .buttonStyle(.borderedProminent)
