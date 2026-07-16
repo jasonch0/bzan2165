@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var num = 0
-    @State private var image = ""
+    @State private var lastImageNum = -1
+    @State private var lastMessageNum = -1
     @State private var message = ""
+    @State private var image = ""
         // makes it mutable, private makes it only accessible in the struct
     var body: some View {
         VStack {
@@ -23,7 +24,6 @@ struct ContentView: View {
                 .minimumScaleFactor(0.5)
                 .animation(.easeInOut(duration: 0.15), value: message)
 
-            
             
             Image(image)
                 .resizable()
@@ -40,10 +40,20 @@ struct ContentView: View {
                                 "Bill",
                                 "foo",
                                 "When the Genius Bar Needs Help, They Call You! BLAH BLAH BLAH BLAH BLAH"]
-                message = messages[num]
-                image = "image\(Int.random(in: 0...3))"
                 
-                num = Int.random(in: 0...3)
+                var messageNum: Int
+                repeat {
+                    messageNum = Int.random(in: 0...messages.count-1)
+                } while messageNum == lastMessageNum
+                message = messages[messageNum]
+                
+                var imageNum = Int.random(in: 0...4)
+                while imageNum == lastImageNum {
+                    imageNum = Int.random(in: 0...4)
+                }
+                image = "image\(imageNum)"
+                lastImageNum = imageNum
+            
             }
             .buttonStyle(.borderedProminent)
             .font(.title2)
